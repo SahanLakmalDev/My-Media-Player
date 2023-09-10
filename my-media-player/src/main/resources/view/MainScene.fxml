@@ -19,7 +19,7 @@
                   <MediaView fx:id="mediaView" fitHeight="200.0" fitWidth="200.0" />
                   <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="200.0" StackPane.alignment="BOTTOM_CENTER">
                      <children>
-                        <Slider prefHeight="0.0" prefWidth="718.0">
+                        <Slider fx:id="pbProgress" prefHeight="0.0" prefWidth="718.0">
                            <padding>
                               <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                            </padding>
@@ -49,12 +49,12 @@
                                     <Insets left="7.0" />
                                  </HBox.margin>
                               </Button>
-                              <Button fx:id="btnBackward" mnemonicParsing="false" onAction="#btnBackwardOnAction" text="&lt;&lt;&lt;">
+                              <Button fx:id="btnSlowRate" mnemonicParsing="false" onAction="#btnSlowRateOnAction" text="&lt;&lt;&lt;">
                                  <HBox.margin>
                                     <Insets left="7.0" />
                                  </HBox.margin>
                               </Button>
-                              <Button fx:id="btnForward" mnemonicParsing="false" onAction="#btnForwardOnAction" text="&gt;&gt;&gt;">
+                              <Button fx:id="btnFastForward" mnemonicParsing="false" onAction="#btnFastForwardOnAction" text="&gt;&gt;&gt;">
                                  <HBox.margin>
                                     <Insets left="7.0" />
                                  </HBox.margin>
@@ -69,7 +69,7 @@
                                     <Insets left="7.0" right="10.0" />
                                  </HBox.margin>
                               </Button>
-                              <Slider />
+                              <Slider fx:id="volumeSlider" />
                            </children>
                            <padding>
                               <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
