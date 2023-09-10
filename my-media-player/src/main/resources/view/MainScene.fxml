@@ -1,14 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.media.MediaView?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="lk.ijse.dep11.mediaApp.MainSceneController"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="463.0" prefWidth="748.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep11.mediaApp.MainSceneController">
+   <children>
+      <BorderPane layoutX="178.0" layoutY="102.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <center>
+            <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <MediaView fitHeight="200.0" fitWidth="200.0" />
+                  <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="200.0" StackPane.alignment="BOTTOM_CENTER">
+                     <children>
+                        <Slider prefHeight="16.0" prefWidth="207.0">
+                           <padding>
+                              <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
+                           </VBox.margin>
+                        </Slider>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Button fx:id="btnChooseFile" mnemonicParsing="false" onAction="#btnChooseFileOnAction" text="ChooseFile">
+                                 <HBox.margin>
+                                    <Insets left="7.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button fx:id="btnPlay" mnemonicParsing="false" onAction="#btnPlayOnAction" text="Play">
+                                 <HBox.margin>
+                                    <Insets left="7.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button fx:id="btnPause" mnemonicParsing="false" onAction="#btnPauseOnAction" text="Pause">
+                                 <HBox.margin>
+                                    <Insets left="7.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button fx:id="btnStop" mnemonicParsing="false" onAction="#btnStopOnAction" text="Stop">
+                                 <HBox.margin>
+                                    <Insets left="7.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button fx:id="btnBackward" mnemonicParsing="false" onAction="#btnBackwardOnAction" text="&lt;&lt;&lt;">
+                                 <HBox.margin>
+                                    <Insets left="7.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button fx:id="btnForward" mnemonicParsing="false" onAction="#btnForwardOnAction" text="&gt;&gt;&gt;">
+                                 <HBox.margin>
+                                    <Insets left="7.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button fx:id="btnBack10s" mnemonicParsing="false" onAction="#btnBack10sOnAction" text="-10s">
+                                 <HBox.margin>
+                                    <Insets left="7.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button fx:id="btnFront10s" mnemonicParsing="false" onAction="#btnFront10sOnAction" text="+10s">
+                                 <HBox.margin>
+                                    <Insets left="7.0" right="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Slider />
+                           </children>
+                        </HBox>
+                     </children>
+                     <StackPane.margin>
+                        <Insets top="7.0" />
+                     </StackPane.margin>
+                  </VBox>
+               </children>
+            </StackPane>
+         </center>
+      </BorderPane>
+   </children>
 </AnchorPane>
